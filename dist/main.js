@@ -1,8 +1,15 @@
-/* const source = $("recipe-template").html()
+const source = $("recipe-template").html()
+console.log(source)
 const template = Handlebars.compile(source)
- */
 
-
+const render = function(recipes){
+    $("#recipe-container").empty()
+    let newHtml = template({recipes})
+    console.log(newHtml)
+    $("#recipe-container").append(newHtml)
+}
+ 
+ 
 
 
 const getRecipe = function(){
@@ -10,14 +17,8 @@ const getRecipe = function(){
  
     $.get(`/recipes/${newFood}`, function (response) {
         console.log(response)
-        // render(response)
+      
 })
 }
 
-/* 
-const render = function(recipes){
-    $("#recipe-container").empty()
-    let newHtml = template({recipes})
-    console.log(newHtml)
-    $("#recipe-container").append(newHtml)
-} */
+
