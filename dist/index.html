@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+   
+    
+</head>
+<body>
+    <div id="new-recipe">
+        <input type="text" id="new-food-input" placeholder="Recipe" />
+        <input type="text" id="new-ingredient-input" placeholder="Ingredients" />
+        <button onclick=getRecipe()>Search</button>
+       
+    </div>
+
+    <div id="recipe-container"></div>
+
+   <!--  <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each recipies}}
+            <div class = "recipefound">
+                <a href={{href}}>{{title}}</a>
+                <p>{{ingredients}}<p>
+                <img src = {{thumbnail}}>    
+                
+            </div>
+        {{/each}}
+    </script> -->
+    
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+   
+    <script src="main.js"></script>
+</body>
+</html>
