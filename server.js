@@ -33,13 +33,13 @@ app.get('/sanity', function (req, res) {
 app.get('/recipes/:food', function (req, res) {
     let searchFood = req.params.food
     
-    request(`http://www.recipepuppy.com/api/?q=${searchFood}`, function(err, res, body) {  
+    request(`http://www.recipepuppy.com/api/?q=${searchFood}`, function(err, response, body) {  
     json.data = JSON.parse(body).results
     console.log(json.data)
-    return json.data
+    res.send(json.data)
 });
    
-    res.send(json.data)
+
 })
 
 const port = 8080 //because why not
